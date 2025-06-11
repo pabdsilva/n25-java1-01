@@ -9,6 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class BeeWorld extends World
 {
 
+    //Fields
+    private int score;
+    private final int PONTOS = 100;
+    private Abelha abelha;
     /**
      * Constructor for objects of class BeeWorld.
      * 
@@ -18,6 +22,7 @@ public class BeeWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
         prepare();
+        updateScore();
     }
 
     /**
@@ -29,9 +34,9 @@ public class BeeWorld extends World
         Aranha aranha = new Aranha();
         addObject(aranha,31,30);
 
-        Abelha abelha = new Abelha();
+        abelha = new Abelha();
         addObject(abelha,44,151);
-        
+
         for (int qtd=0;qtd<20; qtd++){
             int posX = Greenfoot.getRandomNumber(800);
             int posY = Greenfoot.getRandomNumber(600);
@@ -39,5 +44,24 @@ public class BeeWorld extends World
             int rot = Greenfoot.getRandomNumber(360) + 1;
             addObject(new Mosca(vel, rot), posX, posY);
         }
+        //Mostrando texto
+        TextoColorido txt = new TextoColorido("Mensagem Teste",500,50, 18,Color.BLUE, Color.PINK);
+        addObject(txt, 500, 50);
+    }
+    //Acessador ou getter do Score
+    public int getScore(){
+        return score;
+    }
+
+    /**
+     * Método paraatusalizar o Score da Abelha
+     */
+    public void updateScore(){
+        score += PONTOS; //score = score + PONTOS
+        showText("Score:" + score, 100, 10);
+    }
+    //Acessador ou getter da Abelha
+    public Abelha getAbelha(){
+        return abelha;
     }
 }
