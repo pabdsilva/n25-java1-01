@@ -6,9 +6,9 @@ public class Estudante {
 	private int ra;
 	private double nota;
 	private boolean ehFumante;
-	//Contructor
+	//Constructor
 	public Estudante() {
-		setNome(" Sem nome ");
+		setNome("Sem nome");
 		ra = 0;
 		nota = 0.0;
 		ehFumante = false;
@@ -43,5 +43,12 @@ public class Estudante {
 	public void setEhFumante(boolean ehFumante) {
 		this.ehFumante = ehFumante;
 	}
-
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Nome: " + getNome() + "\n" +
+			   "Ra: " + getRa() + "\n" +
+			   "Nota: "+ getNota() + "\n"+
+			   "Fumante: " + isEhFumante();
+	}
 }
