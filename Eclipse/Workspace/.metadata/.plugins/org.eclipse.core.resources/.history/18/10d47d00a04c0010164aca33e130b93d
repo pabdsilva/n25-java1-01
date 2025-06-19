@@ -1,0 +1,15 @@
+package br.com.senaisp.baur.aula06;
+
+import java.util.Scanner;
+
+public class Exemplo03 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//Criando uma matriz
+		//Cinema com 5 fileiras de 10 cadeiras por fileiras
+		
+		
+	}
+
+}
