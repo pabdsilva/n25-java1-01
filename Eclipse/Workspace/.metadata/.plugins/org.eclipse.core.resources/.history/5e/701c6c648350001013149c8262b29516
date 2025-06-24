@@ -1,0 +1,14 @@
+package br.com.senaisp.baur.aula06;
+
+public class Exemplo07 {
+
+	public static void main(String[] args) {
+		//Eroo de sintaxe
+		int x=1, y=2;
+		if(x==y)//Comparativo double == {
+			System.out.println("Aqui tem erro de sintaxe");
+		}
+		
+	}
+
+}

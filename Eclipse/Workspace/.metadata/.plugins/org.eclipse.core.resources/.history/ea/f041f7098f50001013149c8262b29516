@@ -1,0 +1,7 @@
+package br.com.senaisp.baur.aula07;
+
+public class Carta {
+	private String naipe;
+	
+	
+}

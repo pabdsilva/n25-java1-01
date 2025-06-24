@@ -11,6 +11,7 @@ public class Exemplo03 {
 		char [][] cinema = new char[5][9];
 		//Inicializando com o _
 		for(int i=0;i<cinema.length;i++) {
+			//preenchendo as poltronas
 			for (int j=0;j<cinema[i].length;j++) {
 				cinema[i][j] = '_';
 			}
@@ -42,9 +43,9 @@ public class Exemplo03 {
 		                 //123456789123456789
 		System.out.println("  1 2 3 4 5 6 7 8 9");
 		for (int i=0;i<cinema.length;i++) {
-		System.out.println((i+1));//mostrando a fileira
+		System.out.print((i+1));//mostrando a fileira
 		for(int j=0;j<cinema[i].length;j++) {
-			System.out.println(" "+cinema[i][j]);
+			System.out.print(" "+cinema[i][j]);
 		}//fim for j
 		System.out.println("\t");//Quebrando a linha);
 		}//fim for i
