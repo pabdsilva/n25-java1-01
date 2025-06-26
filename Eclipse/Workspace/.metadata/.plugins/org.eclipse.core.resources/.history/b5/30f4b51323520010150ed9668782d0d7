@@ -1,0 +1,51 @@
+package br.com.senaisp.baur.aula07;
+
+import java.awt.Color;
+
+import javax.swing.JPanel;
+
+public abstract class Desenho extends JPanel {
+	//Criando uma variável estástica
+	private static int qtdeInstancias = 0;
+	
+	private static final long serialVersionUID = 1L;
+	private int posX;
+	private int posY;
+	private Color cor;
+	//vonstructor
+	public Desenho(int posX, int posY, Color cor) {
+		qtdeInstancias++;  //acrescentando a qtdeInstancias
+		this.posX = posX;
+		this.posY = posY;
+		this.cor = cor;
+	}
+	public int getPosX() {
+		return posX;
+	}
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+	public int getPosY() {
+		return posY;
+	}
+	public void setPosY(int posY) {
+		this.posY = posY;
+	}
+	public Color getCor() {
+		return cor;
+	}
+	public void setCor(Color cor) {
+		this.cor = cor;
+	}
+	//Metodo abstrato de desenhaForma
+	protected abstract void desenharForma(Graphics g);
+	//Metodo mostrar desenho
+	public void paint {
+		desenharForma(g);
+	}
+	//Método estático
+	public static int getQtdeInstancias90 {
+		return qtdeInstancias;
+	}
+	
+}

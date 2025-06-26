@@ -9,21 +9,24 @@ public class Exemplo08 {
 		Scanner sc = new Scanner(System.in);
 		int idade;
 		do {
-		try {
-			System.out.println("Digite sua idade: ");
-			idade = sc.nextInt();
-			System.out.println("Você nasceu em " + (2025 - idade));
-		} catch (InputMismatchException e) {
-			idade = 0;
-			System.out.println("Você digitou uma idade inválida!");
-			sc.nextLine();//Captura o valor com erro para não ficar em loop
-			idade=0;
-		} catch (ArithmeticException e) {
-			System.out.println("Divisão por zero!");
-		} catch (Exception e) {
-			idade = 0;
-			System.out.println("Eroo geral!");
-		}
+			try {
+				System.out.println("Digite sua idade: ");
+				idade = sc.nextInt();
+				System.out.println("Você nasceu em " + 
+						(2025 - idade));
+			} catch (InputMismatchException e) { //tratamento genérico
+				idade = 0;
+				System.out.println("Você digitou uma "
+						+ "idade inválida!");
+				sc.nextLine();//Captura o valor com erro 
+								//para não ficar em loop
+			} catch( ArithmeticException e) {
+				idade = 0;
+				System.out.println("Divisão por zero!");
+			} catch( Exception e) {
+				idade = 0;
+				System.out.println("Erro geral");
+			}
 		} while(idade<=0);
 		sc.close();
 	}

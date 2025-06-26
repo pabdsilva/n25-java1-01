@@ -1,0 +1,17 @@
+package br.com.senaisp.baur.aula07;
+
+public class Retangulo extends Desenho {
+	
+	private int comprimento;
+	private int largura;
+	private static final long serialVersionUID = 1L;
+	
+	public Retangulo(int posX, int posY, color cor) {
+		super(posX, posY, cor);
+	}
+	
+	@Override
+	protected void desenharForma (Graphics g) {
+		
+	}
+}

@@ -1,0 +1,45 @@
+package br.com.senaisp.baur.aula07;
+
+import javax.swing.JPanel;
+
+public abstract class Desenho extends JPanel {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int posX;
+	private int posY;
+	private Color cor;
+	//vonstructor
+	public Desenho(int posX, int posY, Color cor) {
+		this.posX = posX;
+		this.posY = posY;
+		this.cor = cor;
+	}
+	public int getPosX() {
+		return posX;
+	}
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+	public int getPosY() {
+		return posY;
+	}
+	public void setPosY(int posY) {
+		this.posY = posY;
+	}
+	public color getCor() {
+		return cor;
+	}
+	public void setCor(color cor) {
+		this.cor = cor;
+	}
+	//Metodo abstrato de desenhaForma
+	protected abstract void desenharForma(Graphics g);
+	//Metodo mostrar desenho
+	public void paint {
+		desenharForma(g);
+	}
+	
+}

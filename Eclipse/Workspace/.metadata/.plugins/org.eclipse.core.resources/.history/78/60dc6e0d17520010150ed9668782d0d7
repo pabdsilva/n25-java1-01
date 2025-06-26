@@ -1,0 +1,13 @@
+package br.com.senaisp.baur.aula07;
+
+public class Retangulo extends Desenho {
+	
+	public Retangulo(int posX, int posY, color cor) {
+		super(posX, posY, cor);
+	}
+	
+	@Override
+	protected void desenharForma (Graphics g) {
+		
+	}
+}

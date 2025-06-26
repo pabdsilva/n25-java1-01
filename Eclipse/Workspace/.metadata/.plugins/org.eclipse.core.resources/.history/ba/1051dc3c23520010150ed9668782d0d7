@@ -1,0 +1,29 @@
+package br.com.senaisp.baur.aula07;
+
+import java.awt.Color;
+
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+
+public class DesenhoTeste {
+
+	public static void main(String[] args) {
+		JOptionPane  pnl = new JOptionPane();
+		JDialog dig = pnl.createDialog("Desenhos em Java");
+		dlg.setSize(800, 600);
+		//Mostrar quatidade de instancias
+		System.out.println(Desenho.getQtdeInstancias);
+		//Criando o desenho
+		Retangulo ret = new Retangulo(50, 50, 300, 200, Color.BLUE);
+		Quadrado quad = new Quadrado(50, 50, 400, Color.RED);
+		
+		//Aplicando o desenho na janela
+		dig.setContentPane(ret);
+		//mostrando a janela
+		dig.setVisible(true);
+		
+		
+		
+	}
+
+}
